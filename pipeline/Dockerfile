@@ -21,3 +21,4 @@ docker run -it --rm \
   -v ny_taxi_postgres_data:/var/lib/postgresql \
   -p 5432:5432 \
   postgres:18
+
