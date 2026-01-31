@@ -1,41 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
-
-
-
+import click
 import pandas as pd
 from sqlalchemy import create_engine
 
-year = 2021
-month = 1
-
-pg_user = 'root'
-pg_password = 'root'
-pg_host = 'localhost'
-pg_port = '5432'
-pg_database = 'ny_taxi'
-
-
-
-# Read a sample of the data
-
-
-
-# Check data types
-#df.dtypes
-
-# Check data shape
-#df.shape
-
-
-# In[4]:
-
-
-# In[5]:
 
 
 dtype = {
@@ -75,6 +44,7 @@ def run():
     year = 2021
     month = 1
     chunksize = 100000
+    
     prefix = 'https://github.com/DataTalksClub/nyc-tlc-data/releases/download/yellow/'
     url = f'{prefix}/yellow_tripdata_{year}-{month:02d}.csv.gz'
     engine = create_engine('postgresql://root:root@localhost:5432/ny_taxi')
